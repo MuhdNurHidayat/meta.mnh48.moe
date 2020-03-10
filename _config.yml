@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Meta MNH48
+tagline:          'Meta information of MNH48'
+description:      'Meta information of MNH48'
+url:              https://meta.mnh48.moe
+baseurl:          /
+
+author:
+  name:           'Yaya - NAH @ MNH (hidayaћ MNH48)'
+  url:            https://twitter.com/mnh48com
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/MuhdNurHidayat/meta.mnh48.moe
