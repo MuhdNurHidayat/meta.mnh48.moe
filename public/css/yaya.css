@@ -29,4 +29,5 @@ img[alt$="><"] {
   font-family: "AmiriWeb", "Noto Kufi Arabic", roboto, "Times New Roman", sans-serif;
   line-height: 2em;
   direction: rtl;
+  unicode-bidi: embed;
 }
