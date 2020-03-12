@@ -1,0 +1,31 @@
+@font-face {
+    font-family: AmiriWeb;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/amiri/Amiri-Regular.woff2') format('woff2'),
+         url('../font/amiri/Amiri-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: AmiriWeb;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/amiri/Amiri-Bold.woff2') format('woff2'),
+         url('../font/amiri/Amiri-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: AmiriWeb;
+    font-style: oblique;
+    font-weight: 400;
+    src: url('../font/amiri/Amiri-Slanted.woff2') format('woff2'),
+         url('../font/amiri/Amiri-Slanted.woff') format('woff');
+}
+
+@font-face {
+    font-family: AmiriWeb;
+    font-style: oblique;
+    font-weight: 700;
+    src: url('../font/amiri/Amiri-BoldSlanted.woff2') format('woff2'),
+         url('../font/amiri/Amiri-BoldSlanted.woff') format('woff');
+}

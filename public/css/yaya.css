@@ -1,0 +1,32 @@
+/*Handles image*/
+img.resize {
+  float: left;
+  max-width:50%;
+  max-height:50%;
+}
+
+img[alt$=">"] {
+  float:right;
+  padding: 1em;
+}
+
+img[alt$="<"] {
+  float:left;
+  padding: 1em;
+}
+
+img[alt$="><"] {
+  display: block;
+  max-width: 100%;
+  padding: 1em;
+  height: auto;
+  margin: auto;
+  float: none!important;
+}
+
+/* Forces the font for Jawi*/
+:lang(ms-Arab){
+  font-family: "AmiriWeb", "Noto Kufi Arabic", roboto, "Times New Roman", sans-serif;
+  line-height: 2em;
+  direction: rtl;
+}
