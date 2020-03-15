@@ -3,8 +3,17 @@ title: "Home - Laman Utama - لامن اوتام"
 layout: default
 ---
 
-# Meta MNH48
+# Meta MNH48 - ميتا MNH48
+
 Meta information of MNH48
+{: lang="en"}
+
+Maklumat meta mengenai MNH48
+{: lang="ms"}
+
+معلومت ميتا مڠناءي MNH48
+{: lang="ms-Arab"}
+
 
 ## What this repo do?
 I'm using it for GitHub Page to provide bilingual meta information of myself, to be transparent of what I've done. I had to make the repo public to use GitHub Page function as I don't have money to subscribe to the Pro version yet, I will make it private when I have Pro account.

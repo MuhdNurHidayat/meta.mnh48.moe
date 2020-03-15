@@ -10,6 +10,10 @@
     </div>
 
     <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="javascript:showEnglish();" onclick="showEnglish();return false;">ENGLISH</a>
+      <a class="sidebar-nav-item" href="javascript:showMalayL();" onclick="showMalayL();return false;">BAHASA MELAYU RUMI</a>
+      <a class="sidebar-nav-item" href="javascript:showMalayA();" onclick="showMalayA();return false;">بهاس ملايو جاوي</a>
+      <br/>
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home - Laman Utama - لامن اوتام</a>
 
       {% comment %}

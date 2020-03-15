@@ -30,4 +30,10 @@ img[alt$="><"] {
   line-height: 2em;
   direction: rtl;
   unicode-bidi: embed;
+  display: none;
+}
+
+/* Hide Malay by default */
+:lang(ms){
+  display: none;
 }
