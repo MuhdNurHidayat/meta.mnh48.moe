@@ -3,13 +3,20 @@ title: "Home - Laman Utama - لامن اوتام"
 layout: default
 ---
 
-# Meta MNH48 - ميتا MNH48
+# Meta MNH48
+{: lang="en"}
 
 Meta information of MNH48
 {: lang="en"}
 
+# Meta MNH48
+{: lang="ms"}
+
 Maklumat meta mengenai MNH48
 {: lang="ms"}
+
+# ميتا MNH48
+{: lang="ms-Arab"}
 
 معلومت ميتا مڠناءي MNH48
 {: lang="ms-Arab"}
