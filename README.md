@@ -6,6 +6,6 @@ I'm using it for GitHub Page to provide bilingual meta information of myself, to
 
 ## Theme used
 The theme used is [Hyde](https://github.com/poole/hyde) available under MIT.
-
+ 
 ## Copyright
 All other contents here aside from the theme are copyrighted by the author Yaya MNH48, and not available for reuse.

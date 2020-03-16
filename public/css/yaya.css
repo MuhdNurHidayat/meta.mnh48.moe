@@ -37,3 +37,27 @@ img[alt$="><"] {
 :lang(ms){
   display: none;
 }
+
+/* Language selector */
+.langsel button {
+  background-color: #454545;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 10px;
+  cursor: pointer;
+  float: left;
+}
+
+.langsel button:not(:last-child) {
+  border-right: none;
+}
+
+.langsel:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.langsel button:hover {
+  background-color: #999999;
+}

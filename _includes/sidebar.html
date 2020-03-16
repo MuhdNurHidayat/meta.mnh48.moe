@@ -10,10 +10,12 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="javascript:showEnglish();" onclick="showEnglish();return false;" title="Read in English - Baca dalam bahasa Inggeris - باچ دالم بهاس ايڠݢريس">ENGLISH</a>
-      <a class="sidebar-nav-item" href="javascript:showMalayL();" onclick="showMalayL();return false;" title="Read in Malay (Latin script) - Baca dalam bahasa Melayu Rumi - باچ دالم بهاس ملايو رومي">BAHASA MELAYU RUMI</a>
-      <a class="sidebar-nav-item" href="javascript:showMalayA();" onclick="showMalayA();return false;" title="Read in Malay (Arabic script) - Baca dalam bahasa Melayu Jawi - باچ دالم بهاس ملايو جاوي">بهاس ملايو جاوي</a>
-      <hr>
+      <div class="langsel">
+        <button onclick="showEnglish();" title="Read in English - Baca dalam bahasa Inggeris - باچ دالم بهاس ايڠݢريس">ENGLISH</button>
+        <button onclick="showMalayL();" title="Read in Malay (Latin script) - Baca dalam bahasa Melayu Rumi - باچ دالم بهاس ملايو رومي">MELAYU RUMI</button>
+        <button onclick="showMalayA();" title="Read in Malay (Arabic script) - Baca dalam bahasa Melayu Jawi - باچ دالم بهاس ملايو جاوي">ملايو جاوي</button>
+      </div>
+      <noscript>Your browser does not support or has disabled JavaScript, you cannot change the display language of the website.<br/>Pelayar anda tidak menyokong atau telah melumpuhkan JavaScript, anda tidak boleh menukar bahasa paparan laman web ini.<br/>ڤلايار اندا تيدق مڽوکوڠ اتاو تله ملومڤوهکن JavaScript⹁ اندا تيدق بوليه منوکر بهاس ڤاڤرن لامن ويب اين.</noscript>
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home - Laman Utama - لامن اوتام</a>
 
       {% comment %}
@@ -31,6 +33,6 @@
       {% endfor %}
     </nav>
 
-    <p><span lang="en">&copy; Yaya MNH48 {{ site.time | date: '%Y' }}. All rights reserved.</span> <span lang="ms">&copy; Yaya MNH48 {{ site.time | date: '%Y' }}. Hak cipta terpelihara.</span> <span lang="ms-Arab">&copy; يايا MNH48 {{ site.time | date: '%Y' }}. هق چيڤتا ترڤليهار.</span></p>
+    <p><span lang="en">&copy; Yaya MNH48 {{ site.time | date: '%Y' }}. All rights reserved.</span><span lang="ms">&copy; Yaya MNH48 {{ site.time | date: '%Y' }}. Hak cipta terpelihara.</span><span lang="ms-Arab">&copy; يايا MNH48 {{ site.time | date: '%Y' }}. هق چيڤتا ترڤليهار.</span></p>
   </div>
 </div>
