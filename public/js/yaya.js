@@ -3,7 +3,7 @@ function showEnglish() {
   
   contentEn = document.querySelectorAll('[lang="en"]');
   for (i = 0; i < contentEn.length; i++) {
-    contentEn[i].style.display = "block";
+    contentEn[i].style.display = "inline";
   }
   
   contentMs = document.querySelectorAll('[lang="ms"]');
@@ -27,7 +27,7 @@ function showMalayL() {
   
   contentMs = document.querySelectorAll('[lang="ms"]');
   for (i = 0; i < contentMs.length; i++) {
-    contentMs[i].style.display = "block";
+    contentMs[i].style.display = "inline";
   }
   
   contentJawi = document.querySelectorAll('[lang="ms-Arab"]');
@@ -51,7 +51,7 @@ function showMalayA() {
   
   contentJawi = document.querySelectorAll('[lang="ms-Arab"]');
   for (i = 0; i < contentJawi.length; i++) {
-    contentJawi[i].style.display = "block";
+    contentJawi[i].style.display = "inline";
   }
 }
 
