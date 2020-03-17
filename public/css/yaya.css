@@ -43,18 +43,10 @@ img[alt$="><"] {
   background-color: #454545;
   border: 1px solid white;
   color: white;
-  padding: 10px 10px;
+  padding: 5px 5px;
   cursor: pointer;
   float: left;
-  text-align: center;
-  height: 50px;
-  width: 110px;
-}
-
-@media (min-width: 48em) {
-  .langsel button {
-    text-align: left;
-  }
+  height: 40px;
 }
 
 .langsel button:not(:last-child) {
