@@ -51,12 +51,7 @@ img[alt$="><"] {
   color: white;
   padding: 5px 5px;
   cursor: pointer;
-  float: left;
   height: 40px;
-}
-
-.langsel button:not(:last-child) {
-  border-right: none;
 }
 
 .langsel:after {
