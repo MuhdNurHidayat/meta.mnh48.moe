@@ -1,7 +1,6 @@
 ---
 title: "Home - Laman Utama - لامن اوتام"
 layout: default
-lang: mul
 ---
 
 ## Meta MNH48
