@@ -46,6 +46,15 @@ img[alt$="><"] {
   padding: 10px 10px;
   cursor: pointer;
   float: left;
+  text-align: center;
+  height: 50px;
+  width: 110px;
+}
+
+@media (min-width: 48em) {
+  .langsel button {
+    text-align: left;
+  }
 }
 
 .langsel button:not(:last-child) {
