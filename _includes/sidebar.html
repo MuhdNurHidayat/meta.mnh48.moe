@@ -1,4 +1,3 @@
-{% assign based = site.baseurl | append: page.lang %}
 {% if page.lang == "ms" %}
   {% assign readin = "Baca dalam " %}
   {% assign langEn = "Bahasa Inggeris" %}
@@ -8,6 +7,9 @@
   {% assign layout = "rumi" %}
   {% assign home = "Laman Utama" %}
   {% assign rights = "Semua hak cipta terpelihara." %}
+  {% assign langlinkEn = page.url | replace: "/ms/", "/en/" %}
+  {% assign langlinkMs = page.url %}
+  {% assign langlinkJw = page.url | replace: "/ms/", "/ms_Arab/" %}
 {% elsif page.lang == "ms_Arab" %}
   {% assign readin = "باچ دالم " %}
   {% assign langEn = "بهاس ايڠݢريس" %}
@@ -17,6 +19,9 @@
   {% assign layout = "jawi" %}
   {% assign home = "لامن اوتام" %}
   {% assign rights = "سموا حق چيڤت ترڤليهارا." %}
+  {% assign langlinkEn = page.url | replace: "/ms_Arab/", "/en/" %}
+  {% assign langlinkMs = page.url | replace: "/ms_Arab/", "/ms/" %}
+  {% assign langlinkJw = page.url %}
 {% else %}
   {% assign readin = "Read in " %}
   {% assign langEn = "English" %}
@@ -26,6 +31,9 @@
   {% assign layout = "english" %}
   {% assign home = "Home" %}
   {% assign rights = "All rights reserved." %}
+  {% assign langlinkEn = page.url %}
+  {% assign langlinkMs = page.url | replace: "/en/", "/ms/" %}
+  {% assign langlinkJw = page.url | replace: "/en/", "/ms_Arab/" %}
 {% endif %}
 <div class="sidebar">
   <div class="container sidebar-sticky">
@@ -40,13 +48,12 @@
 
     <nav class="sidebar-nav">
       <div class="langsel" style="width:100%">
-        <a href="" class="linkbutton" title="{{readin}}{{langEn}}{% if page.lang != 'en' %} - Read in English{% endif %}">ENGLISH</a>
-        <a href="" class="linkbutton" title="{{readin}}{{langMs}}{% if page.lang != 'ms' %} - Baca dalam bahasa Melayu Rumi{% endif %}">MELAYU RUMI</a>
-        <a href="" class="linkbutton" title="{{readin}}{{langJw}}{% if page.lang != 'ms_Arab' %} - باچ دالم بهاس ملايو جاوي{% endif %}">ملايو جاوي</a>
+        <a href="{{site.baseurl}}{{langlinkEn}}" class="linkbutton" title="{{readin}}{{langEn}}{% if page.lang != 'en' %} - Read in English{% endif %}"lang="en">ENGLISH</a>
+        <a href="{{site.baseurl}}{{langlinkMs}}" class="linkbutton" title="{{readin}}{{langMs}}{% if page.lang != 'ms' %} - Baca dalam bahasa Melayu Rumi{% endif %}" lang="ms">MELAYU RUMI</a>
+        <a href="{{site.baseurl}}{{langlinkJw}}" class="linkbutton" title="{{readin}}{{langJw}}{% if page.lang != 'ms_Arab' %} - باچ دالم بهاس ملايو جاوي{% endif %}" lang="ms_Arab">ملايو جاوي</a>
         <a href="#" onclick="lightStyle();return false" class="linkbutton" style="width:10%" title=" " id="changeTheme"> </a>
       </div>
       <noscript>{{ nojs }}</noscript>
-      <a class="sidebar-nav-item{% if page.url == based %} active{% endif %}" href="{{ based }}">{{ home }}</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with

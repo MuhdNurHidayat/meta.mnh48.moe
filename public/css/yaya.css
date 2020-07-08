@@ -39,7 +39,7 @@ img[alt$="><"] {
   align-items:center;
 }
 
-.linkbutton {
+.linkbutton a {
   background-color: #454545;
   border: 1px solid white;
   color: white;
@@ -47,18 +47,19 @@ img[alt$="><"] {
   cursor: pointer;
   height: 40px;
   text-decoration: none;
+  width: 30%;
 }
 
-.linkbutton:hover {
+.linkbutton a:hover {
   background-color: #999999;
   cursor: pointer;
 }
 
-.linkbutton:active {
+.linkbutton a:active {
   background-color: #787878;
 }
 
-.linkbutton:after {
+.linkbutton a:after {
   background-color: #454545;
   content: "";
   clear: both;
