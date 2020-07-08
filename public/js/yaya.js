@@ -17,7 +17,7 @@ function darkStyle() {
 
   document.getElementById("changeTheme").innerHTML = "&#9728;";
   document.getElementById("changeTheme").title = title;
-  document.getElementById("changeTheme").onclick = "lightStyle();return false";
+  document.getElementById("changeTheme").onclick = "function() { lightStyle();return false }";
 }
 
 function lightStyle() {
@@ -34,7 +34,9 @@ function lightStyle() {
 
   document.getElementById("changeTheme").innerHTML = "&#127769;";
   document.getElementById("changeTheme").title = title;
-  document.getElementById("changeTheme").onclick = "lightStyle();return false";
+  document.getElementById("changeTheme").onclick = "function() { darkStyle();return false }";
 }
 
-darkStyle();
+window.onload = function() {
+  darkStyle();
+}
