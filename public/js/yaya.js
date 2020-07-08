@@ -1,57 +1,40 @@
-function showEnglish() {
-  var i, contentEn, contentMs, contentJawi;
-  
-  contentEn = document.querySelectorAll('[lang="en-MY"]');
-  for (i = 0; i < contentEn.length; i++) {
-    contentEn[i].style.display = "block";
-  }
-  
-  contentMs = document.querySelectorAll('[lang="ms"]');
-  for (i = 0; i < contentMs.length; i++) {
-    contentMs[i].style.display = "none";
-  }
-  
-  contentJawi = document.querySelectorAll('[lang="ms-Arab"]');
-  for (i = 0; i < contentJawi.length; i++) {
-    contentJawi[i].style.display = "none";
-  }
+function noStyle() {
+  document.styleSheets[1].disabled = true;
+  document.styleSheets[2].disabled = true;
 }
 
-function showMalayL() {
-  var i, contentEn, contentMs, contentJawi;
-  
-  contentMs = document.querySelectorAll('[lang="ms"]');
-  for (i = 0; i < contentMs.length; i++) {
-    contentMs[i].style.display = "block";
-  }
-  
-  contentEn = document.querySelectorAll('[lang="en-MY"]');
-  for (i = 0; i < contentEn.length; i++) {
-    contentEn[i].style.display = "none";
-  }
-  
-  contentJawi = document.querySelectorAll('[lang="ms-Arab"]');
-  for (i = 0; i < contentJawi.length; i++) {
-    contentJawi[i].style.display = "none";
-  }
+function darkStyle() {
+  noStyle()
+  document.styleSheets[2].disabled = false;
+
+  var title = "Change to light mode.";
+  if (document.documentElement.lang == "en")
+    title = "Change to light mode.";
+  else if (document.documentElement.lang == "ms")
+    title = "Tukar ke mod cerah.";
+  else if (document.documentElement.lang == "ms_Arab")
+    title = "توکر کمود چراه.";
+
+  document.getElementById("changeTheme").innerHTML = "&#9728;";
+  document.getElementById("changeTheme").title = title;
+  document.getElementById("changeTheme").onclick = "lightStyle();return false";
 }
 
-function showMalayA() {
-  var i, contentEn, contentMs, contentJawi;
-  
-  contentJawi = document.querySelectorAll('[lang="ms-Arab"]');
-  for (i = 0; i < contentJawi.length; i++) {
-    contentJawi[i].style.display = "block";
-  }
-  
-  contentEn = document.querySelectorAll('[lang="en-MY"]');
-  for (i = 0; i < contentEn.length; i++) {
-    contentEn[i].style.display = "none";
-  }
-  
-  contentMs = document.querySelectorAll('[lang="ms"]');
-  for (i = 0; i < contentMs.length; i++) {
-    contentMs[i].style.display = "none";
-  }
+function lightStyle() {
+  noStyle()
+  document.styleSheets[1].disabled = false;
+
+  var title = "Change to dark mode.";
+  if (document.documentElement.lang == "en")
+    title = "Change to dark mode.";
+  else if (document.documentElement.lang == "ms")
+    title = "Tukar ke mod gelap.";
+  else if (document.documentElement.lang == "ms_Arab")
+    title = "توکر کمود ݢلڤ";
+
+  document.getElementById("changeTheme").innerHTML = "&#127769;";
+  document.getElementById("changeTheme").title = title;
+  document.getElementById("changeTheme").onclick = "lightStyle();return false";
 }
 
+darkStyle();

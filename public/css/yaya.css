@@ -26,16 +26,10 @@ img[alt$="><"] {
 
 /* Forces the font for Jawi*/
 :lang(ms-Arab){
-  font-family: "AmiriWeb", "Noto Kufi Arabic", roboto, "Times New Roman", sans-serif;
+  font-family: "JawiAm", "AmiriWeb", "Noto Kufi Arabic", roboto, "Times New Roman", sans-serif;
   line-height: 2em;
   direction: rtl;
   unicode-bidi: embed;
-  display: none;
-}
-
-/* Hide Malay by default */
-:lang(ms){
-  display: none;
 }
 
 /* Language selector */
@@ -45,21 +39,31 @@ img[alt$="><"] {
   align-items:center;
 }
 
-.langsel button {
+.linkbutton {
   background-color: #454545;
   border: 1px solid white;
   color: white;
   padding: 5px 5px;
   cursor: pointer;
   height: 40px;
+  text-decoration: none;
 }
 
-.langsel:after {
+.linkbutton:hover {
+  background-color: #999999;
+  cursor: pointer;
+}
+
+.linkbutton:active {
+  background-color: #787878;
+}
+
+.linkbutton:after {
+  background-color: #454545;
   content: "";
   clear: both;
   display: table;
 }
 
-.langsel button:hover {
-  background-color: #999999;
-}
+
+

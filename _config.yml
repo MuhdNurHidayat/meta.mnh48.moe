@@ -21,4 +21,7 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/MuhdNurHidayat/meta.mnh48.moe
+  repo:           https://github.com/mnh48/meta.mnh48.moe
+
+plugins:
+  - jekyll-redirect-from

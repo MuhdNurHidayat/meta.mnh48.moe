@@ -1,3 +1,32 @@
+{% assign based = site.baseurl | append: page.lang %}
+{% if page.lang == "ms" %}
+  {% assign readin = "Baca dalam " %}
+  {% assign langEn = "Bahasa Inggeris" %}
+  {% assign langMs = "Bahasa Melayu (Rumi)" %}
+  {% assign langJw = "Bahasa Melayu (Jawi)" %}
+  {% assign nojs = "Pelayar anda tidak menyokong atau telah melumpuhkan JavaScript, anda tidak boleh menukar tema laman web." %}
+  {% assign layout = "rumi" %}
+  {% assign home = "Laman Utama" %}
+  {% assign rights = "Semua hak cipta terpelihara." %}
+{% elsif page.lang == "ms_Arab" %}
+  {% assign readin = "باچ دالم " %}
+  {% assign langEn = "بهاس ايڠݢريس" %}
+  {% assign langMs = "بهاس ملايو (رومي)" %}
+  {% assign langJw = "بهاس ملايو (جاوي)" %}
+  {% assign nojs = "ڤلاير اندا تيدق مڽوکوڠ اتاو تله ملومڤوهکن JavaScript (جاۏاسکريڤت)⹁ اندا تيدق بوليه منوکر تيما لامن ويب." %}
+  {% assign layout = "jawi" %}
+  {% assign home = "لامن اوتام" %}
+  {% assign rights = "سموا حق چيڤت ترڤليهارا." %}
+{% else %}
+  {% assign readin = "Read in " %}
+  {% assign langEn = "English" %}
+  {% assign langMs = "Malay (Rumi)" %}
+  {% assign langJw = "Malay (Jawi)" %}
+  {% assign nojs = "Your browser does not support or has disabled JavaScript, you cannot change the theme of the website." %}
+  {% assign layout = "english" %}
+  {% assign home = "Home" %}
+  {% assign rights = "All rights reserved." %}
+{% endif %}
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -11,28 +40,29 @@
 
     <nav class="sidebar-nav">
       <div class="langsel" style="width:100%">
-        <button onclick="showEnglish();" style="width:33.33%" title="Read in English - Baca dalam bahasa Inggeris - باچ دالم بهاس ايڠݢريس">ENGLISH</button>
-        <button onclick="showMalayL();" style="width:33.33%" title="Read in Malay (Latin script) - Baca dalam bahasa Melayu Rumi - باچ دالم بهاس ملايو رومي">MELAYU RUMI</button>
-        <button onclick="showMalayA();" style="width:33.33%" title="Read in Malay (Arabic script) - Baca dalam bahasa Melayu Jawi - باچ دالم بهاس ملايو جاوي">ملايو جاوي</button>
+        <a href="" class="linkbutton" title="{{readin}}{{langEn}}{% if page.lang != 'en' %} - Read in English{% endif %}">ENGLISH</a>
+        <a href="" class="linkbutton" title="{{readin}}{{langMs}}{% if page.lang != 'ms' %} - Baca dalam bahasa Melayu Rumi{% endif %}">MELAYU RUMI</a>
+        <a href="" class="linkbutton" title="{{readin}}{{langJw}}{% if page.lang != 'ms_Arab' %} - باچ دالم بهاس ملايو جاوي{% endif %}">ملايو جاوي</a>
+        <a href="#" onclick="lightStyle();return false" class="linkbutton" style="width:10%" title=" " id="changeTheme"> </a>
       </div>
-      <noscript>Your browser does not support or has disabled JavaScript, you cannot change the display language of the website.<br/>Pelayar anda tidak menyokong atau telah melumpuhkan JavaScript, anda tidak boleh menukar bahasa paparan laman web ini.<br/>ڤلايار اندا تيدق مڽوکوڠ اتاو تله ملومڤوهکن JavaScript⹁ اندا تيدق بوليه منوکر بهاس ڤاڤرن لامن ويب اين.</noscript>
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home - Laman Utama - لامن اوتام</a>
+      <noscript>{{ nojs }}</noscript>
+      <a class="sidebar-nav-item{% if page.url == based %} active{% endif %}" href="{{ based }}">{{ home }}</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
+        `layout: [layout]` in the front-matter. See readme for usage.
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
-          {% if node.layout == "page" %}
+          {% if node.layout == layout %}
             <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
     </nav>
 
-    <p><span lang="en-MY">&copy; Yaya MNH48 {{ site.time | date: '%Y' }}. All rights reserved.</span><span lang="ms">&copy; Yaya MNH48 {{ site.time | date: '%Y' }}. Hak cipta terpelihara.</span><span lang="ms-Arab">&copy; يايا MNH48 {{ site.time | date: '%Y' }}. هق چيڤتا ترڤليهار.</span></p>
+    <p>&copy; Yaya MNH48 2012&#8212;{{ site.time | date: '%Y' }}. {{ rights }}</p>
   </div>
 </div>
