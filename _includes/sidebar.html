@@ -5,6 +5,9 @@
   {% assign langJw = "Bahasa Melayu (Jawi)" %}
   {% assign nojs = "Pelayar anda tidak menyokong atau telah melumpuhkan JavaScript, anda tidak boleh menukar tema laman web." %}
   {% assign layout = "rumi" %}
+  {% assign yaya = "Yaya MNH48" %}
+  {% assign sitetitle = "Meta MNH48" %}
+  {% assign sitedesc = "Maklumat meta mengenai Yaya MNH48" %}
   {% assign home = "Laman Utama" %}
   {% assign rights = "Semua hak cipta terpelihara." %}
   {% assign langlinkEn = page.url | replace: "/ms/", "/en/" %}
@@ -18,6 +21,9 @@
   {% assign nojs = "ڤلاير اندا تيدق مڽوکوڠ اتاو تله ملومڤوهکن JavaScript (جاۏاسکريڤت)⹁ اندا تيدق بوليه منوکر تيما لامن ويب." %}
   {% assign layout = "jawi" %}
   {% assign home = "لامن اوتام" %}
+  {% assign yaya = "يايا MNH48" %}
+  {% assign sitetitle = "ميتا MNH48" %}
+  {% assign sitedesc = "معلومت ميتا مڠناءي يايا MNH48" %}
   {% assign rights = "سموا حق چيڤت ترڤليهارا." %}
   {% assign langlinkEn = page.url | replace: "/ms_Arab/", "/en/" %}
   {% assign langlinkMs = page.url | replace: "/ms_Arab/", "/ms/" %}
@@ -30,6 +36,9 @@
   {% assign nojs = "Your browser does not support or has disabled JavaScript, you cannot change the theme of the website." %}
   {% assign layout = "english" %}
   {% assign home = "Home" %}
+  {% assign yaya = "Yaya MNH48" %}
+  {% assign sitetitle = "MNH48 Meta" %}
+  {% assign sitedesc = "Meta information about Yaya MNH48" %}
   {% assign rights = "All rights reserved." %}
   {% assign langlinkEn = page.url %}
   {% assign langlinkMs = page.url | replace: "/en/", "/ms/" %}
@@ -39,11 +48,11 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.baseurl }}">
-          {{ site.title }}
+        <a href="{{site.baseurl}}/{{page.lang}}">
+          {{ sitetitle }}
         </a>
       </h1>
-      <p class="lead">{{ site.description }}</p>
+      <p class="lead">{{ sitedesc }}</p>
     </div>
 
     <nav class="sidebar-nav">
@@ -51,7 +60,7 @@
         <a href="{{site.baseurl}}{{langlinkEn}}" class="linkbutton" title="{{readin}}{{langEn}}{% if page.lang != 'en' %} - Read in English{% endif %}"lang="en">ENGLISH</a>
         <a href="{{site.baseurl}}{{langlinkMs}}" class="linkbutton" title="{{readin}}{{langMs}}{% if page.lang != 'ms' %} - Baca dalam bahasa Melayu Rumi{% endif %}" lang="ms">MELAYU RUMI</a>
         <a href="{{site.baseurl}}{{langlinkJw}}" class="linkbutton" title="{{readin}}{{langJw}}{% if page.lang != 'ms_Arab' %} - باچ دالم بهاس ملايو جاوي{% endif %}" lang="ms_Arab">ملايو جاوي</a>
-        <a href="#" onclick="lightStyle();return false" class="linkbutton" style="width:10%" title=" " id="changeTheme"> </a>
+        <a href="#" onclick="lightStyle();return false" class="linkbutton" style="width:8%" title="-" id="changeTheme">—</a>
       </div>
       <noscript>{{ nojs }}</noscript>
 
@@ -70,6 +79,6 @@
       {% endfor %}
     </nav>
 
-    <p>&copy; Yaya MNH48 2012&#8212;{{ site.time | date: '%Y' }}. {{ rights }}</p>
+    <p>&copy; {{ yaya }} 2012&#8212;{{ site.time | date: '%Y' }}. {{ rights }}</p>
   </div>
 </div>

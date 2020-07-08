@@ -3,11 +3,11 @@
 
   {% include head.html %}
 
-  <body>
+  <body lang="{{page.lang}}">
 
     {% include sidebar.html %}
 
-    <div class="content container">
+    <div lang="{{page.lang}}" class="content container">
       {{ content }}
     </div>
 
