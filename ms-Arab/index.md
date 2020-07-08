@@ -1,7 +1,7 @@
 ---
 title: لامن اوتام
 layout: jawi
-lang: ms_Arab
+lang: ms-Arab
 ---
 
 ## ميتا MNH48

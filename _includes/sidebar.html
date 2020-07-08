@@ -12,8 +12,8 @@
   {% assign rights = "Semua hak cipta terpelihara." %}
   {% assign langlinkEn = page.url | replace: "/ms/", "/en/" %}
   {% assign langlinkMs = page.url %}
-  {% assign langlinkJw = page.url | replace: "/ms/", "/ms_Arab/" %}
-{% elsif page.lang == "ms_Arab" %}
+  {% assign langlinkJw = page.url | replace: "/ms/", "/ms-Arab/" %}
+{% elsif page.lang == "ms-Arab" %}
   {% assign readin = "باچ دالم " %}
   {% assign langEn = "بهاس ايڠݢريس" %}
   {% assign langMs = "بهاس ملايو (رومي)" %}
@@ -25,8 +25,8 @@
   {% assign sitetitle = "ميتا MNH48" %}
   {% assign sitedesc = "معلومت ميتا مڠناءي يايا MNH48" %}
   {% assign rights = "سموا حق چيڤت ترڤليهارا." %}
-  {% assign langlinkEn = page.url | replace: "/ms_Arab/", "/en/" %}
-  {% assign langlinkMs = page.url | replace: "/ms_Arab/", "/ms/" %}
+  {% assign langlinkEn = page.url | replace: "/ms-Arab/", "/en/" %}
+  {% assign langlinkMs = page.url | replace: "/ms-Arab/", "/ms/" %}
   {% assign langlinkJw = page.url %}
 {% else %}
   {% assign readin = "Read in " %}
@@ -42,7 +42,7 @@
   {% assign rights = "All rights reserved." %}
   {% assign langlinkEn = page.url %}
   {% assign langlinkMs = page.url | replace: "/en/", "/ms/" %}
-  {% assign langlinkJw = page.url | replace: "/en/", "/ms_Arab/" %}
+  {% assign langlinkJw = page.url | replace: "/en/", "/ms-Arab/" %}
 {% endif %}
 <div class="sidebar">
   <div class="container sidebar-sticky">
@@ -59,7 +59,7 @@
       <div class="langsel" style="width:100%">
         <a href="{{site.baseurl}}{{langlinkEn}}" class="linkbutton" title="{{readin}}{{langEn}}{% if page.lang != 'en' %} - Read in English{% endif %}"lang="en">ENGLISH</a>
         <a href="{{site.baseurl}}{{langlinkMs}}" class="linkbutton" title="{{readin}}{{langMs}}{% if page.lang != 'ms' %} - Baca dalam bahasa Melayu Rumi{% endif %}" lang="ms">MELAYU RUMI</a>
-        <a href="{{site.baseurl}}{{langlinkJw}}" class="linkbutton" title="{{readin}}{{langJw}}{% if page.lang != 'ms_Arab' %} - باچ دالم بهاس ملايو جاوي{% endif %}" lang="ms_Arab">ملايو جاوي</a>
+        <a href="{{site.baseurl}}{{langlinkJw}}" class="linkbutton" title="{{readin}}{{langJw}}{% if page.lang != 'ms-Arab' %} - باچ دالم بهاس ملايو جاوي{% endif %}" lang="ms-Arab">ملايو جاوي</a>
         <a href="#" onclick="lightStyle();return false" class="linkbutton" style="width:8%" title="-" id="changeTheme">—</a>
       </div>
       <noscript>{{ nojs }}</noscript>
