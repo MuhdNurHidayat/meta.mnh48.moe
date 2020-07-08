@@ -12,12 +12,12 @@ function darkStyle() {
     title = "Change to light mode.";
   else if (document.documentElement.lang == "ms")
     title = "Tukar ke mod cerah.";
-  else if (document.documentElement.lang == "ms_Arab")
+  else if (document.documentElement.lang == "ms-Arab")
     title = "توکر کمود چراه.";
 
   document.getElementById("changeTheme").innerHTML = "&#9728;";
   document.getElementById("changeTheme").title = title;
-  document.getElementById("changeTheme").onclick = "function() { lightStyle();return false }";
+  document.getElementById("changeTheme").onclick = "lightStyle();return false;";
 }
 
 function lightStyle() {
@@ -29,12 +29,12 @@ function lightStyle() {
     title = "Change to dark mode.";
   else if (document.documentElement.lang == "ms")
     title = "Tukar ke mod gelap.";
-  else if (document.documentElement.lang == "ms_Arab")
+  else if (document.documentElement.lang == "ms-Arab")
     title = "توکر کمود ݢلڤ";
 
   document.getElementById("changeTheme").innerHTML = "&#127769;";
   document.getElementById("changeTheme").title = title;
-  document.getElementById("changeTheme").onclick = "function() { darkStyle();return false }";
+  document.getElementById("changeTheme").onclick = "darkStyle();return false;";
 }
 
 window.onload = function() {
