@@ -4,7 +4,7 @@ function noStyle() {
 }
 
 function darkStyle() {
-  noStyle()
+  noStyle();
   document.styleSheets[2].disabled = false;
 
   var title = "Change to light mode.";
@@ -22,7 +22,7 @@ function darkStyle() {
 }
 
 function lightStyle() {
-  noStyle()
+  noStyle();
   document.styleSheets[1].disabled = false;
 
   var title = "Change to dark mode.";
