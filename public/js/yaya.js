@@ -3,6 +3,18 @@ function noStyle() {
   document.styleSheets[2].disabled = true;
 }
 
+function changeEmoji(text) {
+  document.getElementById("changeTheme").innerHTML = text;
+}
+
+function changeTooltip(text) {
+  document.getElementById("changeTheme").title = text;
+}
+
+function changeClick(text) {
+  document.getElementById("changeTheme").onclick = text;
+}
+
 function darkStyle() {
   noStyle();
   document.styleSheets[2].disabled = false;
@@ -15,10 +27,9 @@ function darkStyle() {
   else if (document.documentElement.lang == "ms-Arab")
     title = "توکر کمود چراه.";
 
-  document.getElementById("changeTheme").innerHTML = "&#9728;";
-  document.getElementById("changeTheme").title = title;
-  document.getElementById("changeTheme").onclick = "lightStyle();";
-  return true;
+  changeEmoji("&#9728;");
+  changeTooltip(title);
+  changeClick("lightStyle();");
 }
 
 function lightStyle() {
@@ -33,10 +44,9 @@ function lightStyle() {
   else if (document.documentElement.lang == "ms-Arab")
     title = "توکر کمود ݢلڤ";
 
-  document.getElementById("changeTheme").innerHTML = "&#127769;";
-  document.getElementById("changeTheme").title = title;
-  document.getElementById("changeTheme").onclick = "darkStyle();";
-  return true;
+  changeEmoji("&#127769;");
+  changeTooltip(title);
+  changeClick("darkStyle();");
 }
 
 window.onload = function() {
