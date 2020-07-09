@@ -18,7 +18,7 @@ function darkStyle() {
   document.getElementById("changeTheme").innerHTML = "&#9728;";
   document.getElementById("changeTheme").title = title;
   document.getElementById("changeTheme").onclick = "lightStyle();";
-  return false;
+  return true;
 }
 
 function lightStyle() {
@@ -36,9 +36,9 @@ function lightStyle() {
   document.getElementById("changeTheme").innerHTML = "&#127769;";
   document.getElementById("changeTheme").title = title;
   document.getElementById("changeTheme").onclick = "darkStyle();";
-  return false;
+  return true;
 }
 
 window.onload = function() {
   darkStyle();
-}
+};
