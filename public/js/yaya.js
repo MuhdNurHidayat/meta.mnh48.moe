@@ -11,10 +11,6 @@ function changeTooltip(text) {
   document.getElementById("changeTheme").title = text;
 }
 
-function changeClick(text) {
-  document.getElementById("changeTheme").onclick = text;
-}
-
 function darkStyle() {
   noStyle();
   document.styleSheets[2].disabled = false;
@@ -29,7 +25,7 @@ function darkStyle() {
 
   changeEmoji("&#9728;");
   changeTooltip(title);
-  changeClick("lightStyle();");
+  document.getElementById("changeTheme").onclick = function() { lightStyle(); };
 }
 
 function lightStyle() {
@@ -46,7 +42,7 @@ function lightStyle() {
 
   changeEmoji("&#127769;");
   changeTooltip(title);
-  changeClick("darkStyle();");
+  document.getElementById("changeTheme").onclick = function() { darkStyle(); };
 }
 
 window.onload = function() {
