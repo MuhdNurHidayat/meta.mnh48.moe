@@ -20,6 +20,43 @@ By supporting me, you show that you appreciate my work. It encourages me to spen
 Please note that you should support me only if you like what I've done so far or if you want to support the effort of global internationalization. Otherwise, you don't have to support me. :)
 
 
+### What exactly is your current device?
+
+It's a netbook provided by TM (Malaysian major Internet service provider) to my family back in 2010 for us subscribing to the secondary school student's internet plan with fastest internet offered at our housing area at the time, the Streamyx 1Mbps internet plan (ADSL), with the blazing fast 1Mbps download and 512kbps upload. Note that I have already moved out from that house due to family problem, but I take the netbook with me since it is kinda under my name (remember, it's a secondary school student internet plan, I'm the only one in school at that time in the family), and even my parents themselves had terminated the Streamyx subscription after ending the contract term as the price stayed as is when newer mobile data subscription with much faster speed had lower price. They're now using mobile data for the whole family but with speed of around 20Mbps, a large improvement from the Streamyx 1Mbps internet and cheaper too.
+
+
+#### Technical specification
+
+Brand: Natsys (seemed to be local company)<br>
+Model: Komputer 1 Malaysia<br>
+Motherboard: Pine Trail - M CRB Revision A (information from `neofetch`)<br>
+Processor: Intel Atom N450 (2) @ 1.667GHz<br>
+Graphics: Intel Pineview M x86/MMX/SSE2<br>
+Memory: 1GB<br>
+Hard disk: 250GB HDD (SAMSUNG HM250HI, FW 2AC101C4), with 2x 1TB external HDD (WD10JMVW-11AJGS3, WD10JMVW-11AJGS4)<br>
+Operating system: Ubuntu 18.04.5 LTS i686<br>
+Desktop environment: Xfce<br>
+Windows manager: Xfwm4<br>
+Kernel: 5.4.0-48-generic<br>
+OpenGL version string: 1.4 Mesa 20.0.8<br>
+OpenGL ES profile version string: OpenGL ES 2.0 Mesa 20.0.8<br>
+OpenGL ES profile shading language version string: OpenGL ES GLSL ES 1.0.16<br>
+OpenGL renderer string: Mesa DRI Intel(R) Pineview M x86/MMX/SSE2
+
+GUI Software I use all the time:<br>
+Mozilla Firefox, Notepadqq, mousepad, FontForge, Poedit, Screenshot, GIMP, InkScape, LibreOffice, Thunar, Steam, Minetest, mpv, Audacity, xfburn, SoundWire Server, TigerVNC
+
+GUI Software I do use but it's too lagging:<br>
+OBS (for test streaming), Peek (for GIF screen capture), Blender (for modelling)
+
+GUI Software I need to use but failed to compile:
+- Krita (all art translation are put on hold until I could compile and run it)
+- Aegisub (all video translation are put on hold until I could compile and run it)
+
+GUI Software I tried to run via WINE but crashed:<br>
+Discord, prprlive, Live2D Cubism, facerig
+
+
 ### How to support you?
 
 There are many ways to support me:
